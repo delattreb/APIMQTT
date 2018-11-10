@@ -7,7 +7,7 @@
 
 module.exports = {
     updateESP: async function (req, res) {
-        sails.log.debug('updateESP ' + req.param('connected'))
+        sails.log.debug('updateESP ' + req.param('name') + ' ' + req.param('connected'))
         let namep = req.param('name')
         let connectedp = req.param('connected')
         let result = await Esp.findOne({ name: namep })
