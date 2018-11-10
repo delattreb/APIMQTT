@@ -1,8 +1,8 @@
 {
-  "name": "apidesklaserstation",
+  "name": "apimqtt",
   "private": true,
   "version": "0.1.0",
-  "description": "API DeskLaserStation",
+  "description": "API MQTT",
   "keywords": [],
   "dependencies": {
     "@sailshq/connect-redis": "^3.2.1",

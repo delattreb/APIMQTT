@@ -7,15 +7,16 @@
 
 module.exports = {
     updateESP: async function (req, res) {
+        sails.log.debug('updateESP ' + req.param('connected'))
         let namep = req.param('name')
         let connectedp = req.param('connected')
         let result = await Esp.findOne({ name: namep })
         if (!result) {
             result = await Esp.create({ name: namep, connected: connectedp });
         } else {
-            result = await Esp.update({ id: result.id }).set({ connected: connectedp });
+            result = await Esp.update({ id: result.id }).set({ connected: connectedp })
         }
-        return res.json(result);
+        return res.json(result)
     },
 };
 

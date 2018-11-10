@@ -49,7 +49,7 @@ module.exports.datastores = {
          *                                                                          *
          ***************************************************************************/
         adapter: 'sails-mysql',
-        url: 'mysql://usermqtt:infected@mycube.dscloud.me:3307/mqttlasergame',
+        url: 'mysql://usermqtt:infected@mycube.dscloud.me:3307/apimqtt',
 
     },
 

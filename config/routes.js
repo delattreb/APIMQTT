@@ -29,6 +29,12 @@ module.exports.routes = {
         action: 'updateESP'
     },
 
+    '/insertData': {
+        controller: 'DataController',
+        action: 'insertData'
+    },
+    
+
     // Authentification Routes
     'post /signup': 'AuthController.processSignup',
     'post /signin': 'AuthController.processSignin'

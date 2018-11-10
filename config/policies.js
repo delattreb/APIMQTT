@@ -20,7 +20,7 @@ module.exports.policies = {
     // '*': true,
     //"*": "isAllowedHost",
     DeviceController: {
-        find: ["isAllowedHost"]  //Add values in table if needed
+        //find: ["isAllowedHost"]  //Add values in table if needed
     }
 
 };

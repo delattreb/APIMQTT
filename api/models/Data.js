@@ -1,5 +1,5 @@
 /**
- * Esp.js
+ * Data.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -12,20 +12,19 @@ module.exports = {
     
     name: {
       type: 'string',
-      unique: true,
       required: true,
     },
 
-    connected: {
+    value: {
       type: 'number',
-      allowNull: true,
-      defaultsTo: 0,
+      columnType: 'float',
+      required: true,
     },
 
-    state: {
-      type: 'number',
-      allowNull: true,
-      defaultsTo: 0,
+    date: {
+      type: 'ref',
+      columnType: 'datetime',
+      required: true,
     },
 
   },
