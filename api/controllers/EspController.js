@@ -18,5 +18,18 @@ module.exports = {
         }
         return res.json(result)
     },
+
+    updateESPState: async function (req, res) {
+        sails.log.debug('updateESP ' + req.param('name') + ' ' + req.param('state'))
+        let namep = req.param('name')
+        let statep = req.param('state')
+        let result = await Esp.findOne({ name: namep })
+        if (!result) {
+        } else {
+            result = await Esp.update({ id: result.id }).set({ state: statep })
+        }
+        return res.json(result)
+    },
+
 };
 
