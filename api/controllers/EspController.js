@@ -20,7 +20,7 @@ module.exports = {
     },
 
     updateESPState: async function (req, res) {
-        sails.log.debug('updateESP ' + req.param('name') + ' ' + req.param('state'))
+        sails.log.debug('updateESPState ' + req.param('name') + ' ' + req.param('state'))
         let namep = req.param('name')
         let statep = req.param('state')
         let result = await Esp.findOne({ name: namep })
