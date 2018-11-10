@@ -29,6 +29,11 @@ module.exports.routes = {
         action: 'updateESP'
     },
 
+    '/updateESPState': {
+        controller: 'EspController',
+        action: 'updateESPState'
+    },
+
     '/insertData': {
         controller: 'DataController',
         action: 'insertData'
