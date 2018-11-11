@@ -13,10 +13,10 @@ module.exports["swagger-generator"] = {
     swagger: {
         swagger: '2.0',
         info: {
-            title: 'Swagger Json',
+            title: 'API MQTT',
             description: 'This is a generated swagger json for your sails project',
             termsOfService: 'http://example.com/terms',
-            contact: {name: 'Theophilus Omoregbee', url: 'http://github.com/theo4u', email: 'theo4u@ymail.com'},
+            contact: {name: 'Theophilus Omoregbee', url: 'http://github.com/theo4u', email: 'delattreb@gmail.com'},
             license: {name: 'Apache 2.0', url: 'http://www.apache.org/licenses/LICENSE-2.0.html'},
             version: '1.0.0'
         },

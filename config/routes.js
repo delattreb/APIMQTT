@@ -41,8 +41,8 @@ module.exports.routes = {
     
 
     // Authentification Routes
-    'post /signup': 'AuthController.processSignup',
-    'post /signin': 'AuthController.processSignin'
+//    'post /signup': 'AuthController.processSignup',
+//    'post /signin': 'AuthController.processSignin'
 
     /***************************************************************************
      *                                                                          *
