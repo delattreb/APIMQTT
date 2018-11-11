@@ -1,14 +1,18 @@
 /**
  * Production environment settings
+ * (sails.config.*)
  *
  * ```
  * NODE_ENV=production node app
  * ```
-  */
+ *
+ */
 
 module.exports = {
- datastores: {
+  datastores: {
     default: {
+      adapter: 'sails-mysql',
+      url: 'mysql://usermqtt:infected@mycube.dscloud.me:3307/apimqtt',
     },
 
   },
@@ -16,8 +20,30 @@ module.exports = {
 
 
   models: {
-    migrate: 'alter',
+
+    /***************************************************************************
+    *                                                                          *
+    * To help avoid accidents, Sails automatically sets the automigration      *
+    * strategy to "safe" when your app lifts in production mode.               *
+    * (This is just here as a reminder.)                                       *
+    *                                                                          *
+    * More info:                                                               *
+    * https://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
+    *                                                                          *
+    ***************************************************************************/
+    migrate: 'safe',
+
+    /***************************************************************************
+    *                                                                          *
+    * If, in production, this app has access to physical-layer CASCADE         *
+    * constraints (e.g. PostgreSQL or MySQL), then set those up in the         *
+    * database and uncomment this to disable Waterline's `cascadeOnDestroy`    *
+    * polyfill.  (Otherwise, if you are using a databse like Mongo, you might  *
+    * choose to keep this enabled.)                                            *
+    *                                                                          *
+    ***************************************************************************/
     // cascadeOnDestroy: false,
+
   },
 
 
@@ -63,9 +89,9 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-      // allowOrigins: [
-      //   'https://example.com',
-      // ]
+       allowOrigins: [
+         'http://127.0.0.1',
+       ]
     },
 
   },
@@ -136,7 +162,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -165,10 +191,10 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      'http://127.0.0.1',
+      //'https://staging.example.com',
+    ],
 
 
     /***************************************************************************
@@ -207,7 +233,8 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   log: {
-    level: 'debug'
+    level: 'info',
+    colorize: true
   },
 
 
@@ -237,7 +264,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
@@ -252,7 +279,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  // port: 80,
+  port: 1337,
 
 
 
@@ -273,7 +300,7 @@ module.exports = {
   * > https://sailsjs.com/config/*#?sailsconfigssl                          *
   *                                                                         *
   **************************************************************************/
-  // ssl: undefined,
+  ssl: undefined,
 
 
 
@@ -286,7 +313,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
+    baseUrl: 'http://127.0.0.1',
     internalEmailAddress: 'delattreb@gmail.com',
 
     // mailgunDomain: 'mg.example.com',
@@ -305,7 +332,4 @@ module.exports = {
     //--------------------------------------------------------------------------
 
   },
-
-
-
 };
