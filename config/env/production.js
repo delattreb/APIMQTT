@@ -89,9 +89,9 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-       allowOrigins: [
-         'http://127.0.0.1',
-       ]
+      // allowOrigins: [
+      //   'http://127.0.0.1',
+      // ]
     },
 
   },
@@ -162,7 +162,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      secure: true,
+      //secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -191,10 +191,10 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    onlyAllowOrigins: [
-      'http://127.0.0.1',
-      //'https://staging.example.com',
-    ],
+   // onlyAllowOrigins: [
+   //   'http://127.0.0.1',
+   //   //'https://staging.example.com',
+   // ],
 
 
     /***************************************************************************
