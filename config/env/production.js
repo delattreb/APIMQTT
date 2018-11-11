@@ -233,7 +233,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   log: {
-    level: 'error',
+    level: 'silent',
     colorize: true
   },
 
