@@ -12,7 +12,7 @@ module.exports = {
   datastores: {
     default: {
       adapter: 'sails-mysql',
-      url: 'mysql://usermqtt:infected@192.169.1.15:3307/mqtt',
+      url: 'mysql://usermqtt:infected@192.169.1.15:3307/apimqtt',
     },
 
   },
