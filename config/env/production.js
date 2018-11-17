@@ -12,7 +12,7 @@ module.exports = {
   datastores: {
     default: {
       adapter: 'sails-mysql',
-      url: 'mysql://usermqtt:infected@mycube.dscloud.me:3307/apimqtt',
+      url: 'mysql://usermqtt:infected@mycube.dscloud.me:3307/mqtt',
     },
 
   },
@@ -279,7 +279,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  port: 1335,
+  port: 1337,
 
 
 
